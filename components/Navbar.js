@@ -1,6 +1,7 @@
 import { useState } from 'react';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faFaceRelieved } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link'
 
 export default function Navbar(){
     const [style,setStyle]= useState("navbar1")
@@ -20,9 +21,10 @@ return(
         </div>
         <div className={style}>
             <div className="navbarCollapse">
-            <a className="navItem" href="/">Home</a>
-            <a className="navItem" href="/">Lorem</a>
-            <a className="navItem" href="/">Ipsum</a>
+<a className="navItem" href="/">Home</a>
+<Link href='./signup'>  SIGNUP  </Link>
+<Link href='./login'>  LOGIN   </Link> 
+<Link href='./EditProfile'>  CreateProfile  </Link>
             </div>
         </div>
         <div onClick={changeClass} className="hamburger">

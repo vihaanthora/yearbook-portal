@@ -29,8 +29,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: aqua;
-  height: 50px;
+  background-color:  rgb(179, 228, 228);
+  height: 60px;
 }
 .logo {
   /* flex: 5; */
@@ -39,7 +39,7 @@ a {
 .navbar1 {
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: aqua;
+  background-color: rgb(179, 228, 228);
 }
 .navItem {
   padding: 5px;

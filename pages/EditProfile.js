@@ -24,6 +24,9 @@ export default function EditProfile() {
                     <label for="caption" >Caption</label>
                     <textarea type="text" id="caption" name="caption" />
                 </div>
+                <div>
+                    <input type="file"id="myFile" name="fileName" />
+                </div>
                 <div className="buttons">
                     <button>Cancel</button>
                     <button type="Submit">Save</button>

@@ -25,6 +25,7 @@ return(
 <Link href='./signup'>  SIGNUP  </Link>
 <Link href='./login'>  LOGIN   </Link> 
 <Link href='./EditProfile'>  CreateProfile  </Link>
+<Link href='./search'>  Search Your Friends  </Link>
             </div>
         </div>
         <div onClick={changeClass} className="hamburger">

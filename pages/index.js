@@ -4,7 +4,22 @@ import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 
-export default function Home() {
+const Home=({products})=>{
+  const alumniList=products.map(product=>{
+    return(
+      <div className="name" key={product._id}>
+        <div>{product.name}</div>
+        <div>{product.about}</div>
+        <div>{product.department}</div>
+        <div>{product.email}</div>
+        <div>{product.roll}</div>
+
+      </div>
+    )
+  })
+  // console.log(products)
+  
+
   return (
     <div className={styles.container}>
       <Head>
@@ -16,7 +31,6 @@ export default function Home() {
    
 
        
-       
       <main className={styles.main}>
 
         <h1 className={styles.title}>
@@ -27,6 +41,7 @@ export default function Home() {
        
         
       </main>
+      <div>{alumniList}</div>
      
       <footer className={styles.footer}>
         <a
@@ -40,6 +55,15 @@ export default function Home() {
 
 
       </footer>
+      
     </div>
   )
 }
+export async function getStaticProps(){
+  const res=await fetch('http://localhost:3000/api/hello')
+  const data=await res.json()
+  return{
+    props:{products:data}
+  }
+}
+export default Home

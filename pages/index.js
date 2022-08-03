@@ -4,6 +4,7 @@ import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 
+
 const Home=({products})=>{
   const alumniList=products.map(product=>{
     return(
@@ -20,6 +21,9 @@ const Home=({products})=>{
   // console.log(products)
   
 
+
+export default function Home() {
+
   return (
     <div className={styles.container}>
       <Head>
@@ -28,9 +32,6 @@ const Home=({products})=>{
         <link rel="icon" href="/favicon.ico" />
       </Head>
     
-   
-
-       
       <main className={styles.main}>
 
         <h1 className={styles.title}>
@@ -41,7 +42,9 @@ const Home=({products})=>{
        
         
       </main>
+
       <div>{alumniList}</div>
+
      
       <footer className={styles.footer}>
         <a
